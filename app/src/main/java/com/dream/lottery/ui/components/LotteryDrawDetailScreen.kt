@@ -26,7 +26,7 @@ fun LotteryDrawDetailScreen(draw: LotteryDraw) {
             text = "Lottery Draw Details",
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h1,
+            style = MaterialTheme.typography.h4,
             modifier = Modifier.padding(bottom = 16.dp)
         )
     }

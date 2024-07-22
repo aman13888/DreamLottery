@@ -39,7 +39,7 @@ fun LotteryListScreen(
                     text = "Mkodo Lottery",
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
-                    style = MaterialTheme.typography.h1,
+                    style = MaterialTheme.typography.h4,
                     modifier = Modifier
                         .padding(bottom = 16.dp)
                         .align(Alignment.CenterHorizontally)
@@ -73,7 +73,7 @@ private fun ShowError() {
             modifier = Modifier.align(Alignment.Center),
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
-            style = MaterialTheme.typography.h1
+            style = MaterialTheme.typography.h4
         )
     }
 }
