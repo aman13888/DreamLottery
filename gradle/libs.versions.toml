@@ -1,0 +1,70 @@
+[versions]
+agp = "8.5.1"
+kotlin = "1.9.20"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.3"
+activityCompose = "1.9.0"
+composeBom = "2024.06.00"
+hilt = "2.48"
+retrofit = "2.10.0"
+room = "2.6.1"
+okHttp = "5.0.0-alpha.3"
+materialAndroid = "1.6.5"
+screenshot = "0.0.1-alpha01"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+okHttp3 = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp" }
+hilt-navigation = "androidx.hilt:hilt-navigation-compose:1.2.0"
+lifecycle-runtime-ktx = "androidx.lifecycle:lifecycle-runtime-ktx:2.8.3"
+compose-constraintlayout = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+navigation-compose = "androidx.navigation:navigation-compose:2.7.7"
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-material-android = { group = "androidx.compose.material", name = "material", version.ref = "materialAndroid" }
+compose-animation = "androidx.compose.animation:animation:1.6.8"
+lifecycle-runtime-compose =  "androidx.lifecycle:lifecycle-runtime-compose:2.8.3"
+lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3"
+coroutines-test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3"
+mockito-core = "org.mockito:mockito-core:3.11.2"
+mockito-kotlin = "org.mockito.kotlin:mockito-kotlin:3.2.0"
+hilt-android-testing = "com.google.dagger:hilt-android-testing:2.40.5"
+robolectric = "org.robolectric:robolectric:4.13"
+test-core =  'androidx.test:core:1.5.0'
+core-testing = 'androidx.arch.core:core-testing:2.2.0'
+
+[bundles]
+room = ["room-ktx", "room-runtime"]
+retrofit = ["retrofit", "retrofit-gson", "retrofit-moshi", "okHttp3"]
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref ="hilt" }
+kotlinkapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
+
+
