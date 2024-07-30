@@ -18,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dream.lottery.utils.DataResponse
 import com.dream.lottery.data.LotteryDraw
@@ -63,7 +62,7 @@ fun LotteryListScreen(
 }
 
 @Composable
-private fun ShowError() {
+fun ShowError() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -79,7 +78,7 @@ private fun ShowError() {
 }
 
 @Composable
-private fun ShowLoader() {
+fun ShowLoader() {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -110,40 +109,4 @@ fun LotteryDrawItem(draw: LotteryDraw, onClick: (LotteryDraw) -> Unit) {
             Text(text = "Draw Date: ${draw.drawDate}")
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ShowLoaderPreview() {
-    ShowLoader()
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ShowErrorPreview() {
-    ShowError()
-}
-
-@Preview(showBackground = true)
-@Composable
-fun LotteryListScreenPreview() {
-    LotteryListScreen(
-        lotteryDraws = DataResponse.Success(
-            listOf(
-                LotteryDraw(
-                    id = "draw-1",
-                    drawDate = "2023-05-15",
-                    number1 = "2",
-                    number2 = "16",
-                    number3 = "23",
-                    number4 = "44",
-                    number5 = "45",
-                    number6 = "46",
-                    bonusBall = "47",
-                    topPrize = 1000000
-                )
-            )
-        ),
-        onLotteryDrawClick = {}
-    )
 }

@@ -1,6 +1,6 @@
 package com.dream.lottery.ui.components
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -18,29 +18,26 @@ import com.dream.lottery.data.LotteryDraw
 
 @Composable
 fun LotteryDrawDetailScreen(draw: LotteryDraw) {
-    Box(
-        modifier = Modifier.fillMaxWidth(),
-        contentAlignment = Alignment.Center
-    ) {
+    Column(modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
-            text = "Lottery Draw Details",
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h4,
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
+                text = "Lottery Draw Details",
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.h4,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+        DrawDetailRow(label = "Draw ID", value = draw.id)
+        DrawDetailRow(label = "Draw Date", value = draw.drawDate)
+        DrawDetailRow(label = "Number 1", value = draw.number1)
+        DrawDetailRow(label = "Number 2", value = draw.number2)
+        DrawDetailRow(label = "Number 3", value = draw.number3)
+        DrawDetailRow(label = "Number 4", value = draw.number4)
+        DrawDetailRow(label = "Number 5", value = draw.number5)
+        DrawDetailRow(label = "Number 6", value = draw.number6)
+        DrawDetailRow(label = "Bonus Ball", value = draw.bonusBall)
+        DrawDetailRow(label = "Top Prize", value = draw.topPrize.toString())
     }
-
-    DrawDetailRow(label = "Draw ID", value = draw.id)
-    DrawDetailRow(label = "Draw Date", value = draw.drawDate)
-    DrawDetailRow(label = "Number 1", value = draw.number1)
-    DrawDetailRow(label = "Number 2", value = draw.number2)
-    DrawDetailRow(label = "Number 3", value = draw.number3)
-    DrawDetailRow(label = "Number 4", value = draw.number4)
-    DrawDetailRow(label = "Number 5", value = draw.number5)
-    DrawDetailRow(label = "Number 6", value = draw.number6)
-    DrawDetailRow(label = "Bonus Ball", value = draw.bonusBall)
-    DrawDetailRow(label = "Top Prize", value = draw.topPrize.toString())
 }
 
 @Composable
